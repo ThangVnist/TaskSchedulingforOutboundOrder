@@ -28,9 +28,9 @@ def writeOutput(schedules) :
     # Save as history file
     now = datetime.now() # current date and time
     date_time = now.strftime("%d_%m_%Y_%H-%M-%S")
-    rel_path = f"data\output\Result_{date_time}.json"
+    rel_path = f"data/output/Result_{date_time}.json"
     with open(getAbsoluteDirectory(rel_path), "w") as outfile:
-        json.dump(schedules, outfile, separators=(',', ': '))
+        json.dump(schedules, outfile, indent=2, separators=(',', ': '))
     
 
 
