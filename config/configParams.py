@@ -1,0 +1,6 @@
+
+POP_SIZE = 200
+
+N_GEN = 100
+
+PROB_MUTATION = 0.2

@@ -1,0 +1,764 @@
+{
+  "schedule": [
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j1",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:10",
+      "endTime": "11/08/2022, 08:16"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j1",
+      "employeeId": "62b1a3ac29da55a4b049ae4a",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:10",
+      "endTime": "11/08/2022, 08:17"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j1",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:10",
+      "endTime": "11/08/2022, 08:17"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j1",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:10",
+      "endTime": "11/08/2022, 08:13"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j1",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:10",
+      "endTime": "11/08/2022, 08:15"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j1",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:17",
+      "endTime": "11/08/2022, 08:24"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j1",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 08:16",
+      "endTime": "11/08/2022, 08:22"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "11/08/2022, 08:16",
+      "endTime": "11/08/2022, 09:08"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "62b1a3ac29da55a4b049ae95",
+      "startTime": "11/08/2022, 08:17",
+      "endTime": "11/08/2022, 09:09"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae95",
+      "startTime": "11/08/2022, 08:17",
+      "endTime": "11/08/2022, 09:09"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "62b1a3ac29da55a4b049ae91",
+      "startTime": "11/08/2022, 09:09",
+      "endTime": "11/08/2022, 10:01"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae91",
+      "startTime": "11/08/2022, 09:09",
+      "endTime": "11/08/2022, 10:01"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae95",
+      "startTime": "11/08/2022, 10:01",
+      "endTime": "11/08/2022, 10:53"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j2",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "62b1a3ac29da55a4b049ae95",
+      "startTime": "11/08/2022, 10:01",
+      "endTime": "11/08/2022, 10:53"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j3",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 09:08",
+      "endTime": "11/08/2022, 09:39"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j3",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 09:39",
+      "endTime": "11/08/2022, 10:11"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j3",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 09:09",
+      "endTime": "11/08/2022, 10:17"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j3",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "11/08/2022, 10:53",
+      "endTime": "11/08/2022, 11:54"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j3",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 10:11",
+      "endTime": "11/08/2022, 10:43"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j3",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 10:53",
+      "endTime": "11/08/2022, 11:54"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j3",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "null",
+      "startTime": "11/08/2022, 10:53",
+      "endTime": "11/08/2022, 11:54"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 10:17",
+      "endTime": "11/08/2022, 11:18"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "11/08/2022, 13:00",
+      "endTime": "11/08/2022, 14:05"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 13:00",
+      "endTime": "11/08/2022, 14:00"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 14:00",
+      "endTime": "11/08/2022, 15:01"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 13:00",
+      "endTime": "11/08/2022, 14:00"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "11/08/2022, 14:05",
+      "endTime": "11/08/2022, 15:10"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j4",
+      "employeeId": "62b1a3ac29da55a4b049ae4a",
+      "machineId": "null",
+      "startTime": "11/08/2022, 13:00",
+      "endTime": "11/08/2022, 14:09"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j5",
+      "employeeId": "62b1a3ac29da55a4b049ae4a",
+      "machineId": "null",
+      "startTime": "11/08/2022, 14:09",
+      "endTime": "11/08/2022, 15:13"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j5",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 14:05",
+      "endTime": "11/08/2022, 15:04"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j5",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "11/08/2022, 15:04",
+      "endTime": "11/08/2022, 16:03"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j5",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 15:01",
+      "endTime": "11/08/2022, 15:43"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j5",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "null",
+      "startTime": "11/08/2022, 14:00",
+      "endTime": "11/08/2022, 15:08"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j5",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "11/08/2022, 15:10",
+      "endTime": "11/08/2022, 16:18"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j5",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 15:01",
+      "endTime": "11/08/2022, 16:00"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j6",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "11/08/2022, 16:00",
+      "endTime": "11/08/2022, 17:01"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j6",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "11/08/2022, 16:18",
+      "endTime": "11/08/2022, 17:19"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j6",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 16:03",
+      "endTime": "11/08/2022, 16:35"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j6",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "11/08/2022, 16:35",
+      "endTime": "11/08/2022, 17:07"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j6",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "null",
+      "startTime": "11/08/2022, 15:08",
+      "endTime": "11/08/2022, 16:09"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j6",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "null",
+      "startTime": "11/08/2022, 16:18",
+      "endTime": "11/08/2022, 17:19"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j6",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 08:00",
+      "endTime": "12/08/2022, 08:31"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j7",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "null",
+      "startTime": "12/08/2022, 08:00",
+      "endTime": "12/08/2022, 08:57"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j7",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "12/08/2022, 08:00",
+      "endTime": "12/08/2022, 09:06"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j7",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 08:31",
+      "endTime": "12/08/2022, 09:11"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j7",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "12/08/2022, 08:00",
+      "endTime": "12/08/2022, 09:01"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j7",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 09:11",
+      "endTime": "12/08/2022, 09:50"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j7",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 09:50",
+      "endTime": "12/08/2022, 10:30"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j7",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "null",
+      "startTime": "12/08/2022, 08:31",
+      "endTime": "12/08/2022, 09:33"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae8d",
+      "startTime": "12/08/2022, 08:57",
+      "endTime": "12/08/2022, 09:54"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049ae8d",
+      "startTime": "12/08/2022, 09:06",
+      "endTime": "12/08/2022, 10:17"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "12/08/2022, 09:33",
+      "endTime": "12/08/2022, 10:30"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "62b1a3ac29da55a4b049ae93",
+      "startTime": "12/08/2022, 10:30",
+      "endTime": "12/08/2022, 11:27"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae91",
+      "startTime": "12/08/2022, 09:54",
+      "endTime": "12/08/2022, 10:51"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "62b1a3ac29da55a4b049ae91",
+      "startTime": "12/08/2022, 13:00",
+      "endTime": "12/08/2022, 13:57"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j8",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "12/08/2022, 10:51",
+      "endTime": "12/08/2022, 11:48"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j9",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "12/08/2022, 13:00",
+      "endTime": "12/08/2022, 14:05"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j9",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "12/08/2022, 10:17",
+      "endTime": "12/08/2022, 11:16"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j9",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "null",
+      "startTime": "12/08/2022, 10:30",
+      "endTime": "12/08/2022, 11:36"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j9",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "12/08/2022, 13:00",
+      "endTime": "12/08/2022, 13:59"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j9",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 10:51",
+      "endTime": "12/08/2022, 11:30"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j9",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "null",
+      "startTime": "12/08/2022, 13:57",
+      "endTime": "12/08/2022, 14:56"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j9",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "12/08/2022, 13:59",
+      "endTime": "12/08/2022, 14:58"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "62b1a3ac29da55a4b049af45",
+      "startTime": "12/08/2022, 14:56",
+      "endTime": "12/08/2022, 15:53"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "62b1a3ac29da55a4b049af26",
+      "startTime": "12/08/2022, 13:57",
+      "endTime": "12/08/2022, 15:18"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049af47",
+      "startTime": "12/08/2022, 13:00",
+      "endTime": "12/08/2022, 13:52"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049af45",
+      "startTime": "12/08/2022, 13:59",
+      "endTime": "12/08/2022, 14:51"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049af28",
+      "startTime": "12/08/2022, 14:51",
+      "endTime": "12/08/2022, 15:43"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049af26",
+      "startTime": "12/08/2022, 15:43",
+      "endTime": "12/08/2022, 16:36"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j10",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "62b1a3ac29da55a4b049af49",
+      "startTime": "12/08/2022, 15:53",
+      "endTime": "12/08/2022, 16:50"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j11",
+      "employeeId": "62b1a3ac29da55a4b049ae4a",
+      "machineId": "null",
+      "startTime": "12/08/2022, 14:05",
+      "endTime": "12/08/2022, 15:14"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j11",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 13:00",
+      "endTime": "12/08/2022, 13:42"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j11",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "null",
+      "startTime": "12/08/2022, 14:05",
+      "endTime": "12/08/2022, 15:07"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j11",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "null",
+      "startTime": "12/08/2022, 13:59",
+      "endTime": "12/08/2022, 14:41"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j11",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "null",
+      "startTime": "12/08/2022, 15:18",
+      "endTime": "12/08/2022, 16:20"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j11",
+      "employeeId": "62b1a3ac29da55a4b049ae53",
+      "machineId": "null",
+      "startTime": "12/08/2022, 14:58",
+      "endTime": "12/08/2022, 15:59"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j11",
+      "employeeId": "62b1a3ac29da55a4b049ae65",
+      "machineId": "null",
+      "startTime": "12/08/2022, 16:20",
+      "endTime": "12/08/2022, 17:22"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good1",
+      "taskId": "j12",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049af45",
+      "startTime": "13/08/2022, 08:00",
+      "endTime": "13/08/2022, 09:12"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good2",
+      "taskId": "j12",
+      "employeeId": "62b1a3ac29da55a4b049ae43",
+      "machineId": "62b1a3ac29da55a4b049ae93",
+      "startTime": "13/08/2022, 08:00",
+      "endTime": "13/08/2022, 08:57"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good3",
+      "taskId": "j12",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "62b1a3ac29da55a4b049af45",
+      "startTime": "12/08/2022, 15:07",
+      "endTime": "12/08/2022, 15:41"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good4",
+      "taskId": "j12",
+      "employeeId": "62b1a3ac29da55a4b049ae6e",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "12/08/2022, 15:07",
+      "endTime": "12/08/2022, 16:05"
+    },
+    {
+      "orderId": "Order1",
+      "processId": "Good5",
+      "taskId": "j12",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "12/08/2022, 16:20",
+      "endTime": "12/08/2022, 16:54"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good6",
+      "taskId": "j12",
+      "employeeId": "62b1a3a691dbfba478012934",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "12/08/2022, 16:54",
+      "endTime": "12/08/2022, 17:28"
+    },
+    {
+      "orderId": "Order2",
+      "processId": "Good7",
+      "taskId": "j12",
+      "employeeId": "62b1a3ac29da55a4b049ae5c",
+      "machineId": "62b1a3ac29da55a4b049ae8f",
+      "startTime": "13/08/2022, 09:12",
+      "endTime": "13/08/2022, 10:24"
+    }
+  ],
+  "totalCost": 1950220.581960274,
+  "endDateTime": "13/08/2022, 10:24",
+  "startDateTime": "11/08/2022, 08:10",
+  "numOrderNotOnTime": 0
+}
