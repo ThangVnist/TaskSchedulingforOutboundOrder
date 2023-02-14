@@ -1,8 +1,9 @@
 from pymoo.core.problem import ElementwiseProblem
 from pymoo.core.variable import Real, Integer, Choice, Binary
-from utils.helperModules import calculateDuration, getStartTimeShift, getCost, getTimeStamp
+from utils.helperModules import calculateDuration, getStartTimeShift, getCost, getMachineCost, getTimeStamp, getActualWorkingTime, getPenaltyFee
 
-from utils.initializeData import startTime, baseSalary, endTime, endTimeOrders, endTimeResource, listEmployeeIds, e, m, avgSkill, TASKS, MACHINES, EMPLOYEES, ORDERS
+from utils.initializeData import startTime, baseSalary, baseMachineCost, endTime, \
+    endTimeOrders, endTimeResource, listEmployeeIds, e, m, avgSkill, TASKS, MACHINES, EMPLOYEES, ORDERS, penaltyFeeOrders
 
 
 class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
@@ -63,14 +64,18 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
         scheduleWorkforce = dict()
         scheduleWorkforce['schedule'] = list()
         orderViolatedDeadline = list()
+        actualEndTime = {}
         totalCost = 0
         endTimeAll = 0
+        machineCost = 0
+
         for task in TASKS:
+            taskId = task['id']
             for order in ORDERS:
+                orderId = order['id']
+                actualEndTime[order['id']] = 0
                 for item in order["goods"]:
-                    orderId = order['id']
                     processId = item['goodId']
-                    taskId = task['id']
                     empAssignId = e[orderId][processId][taskId]
                     if taskId in m[orderId][processId]:
                         machineAssignId = m[orderId][processId][taskId]
@@ -106,6 +111,8 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
 
                     # Calculate endtime
                     endTime[orderId][processId][taskId] = startTime[orderId][processId][taskId] + newDuration
+
+                    actualEndTime[order['id']] = max(actualEndTime[order['id']], endTime[orderId][processId][taskId])
                     # Calculate endtime human resource and machine Resource
                     endTimeResource[empAssignId] = endTime[orderId][processId][taskId]
                     if (machineAssignId != "null" and (machineAssignId in endTimeResource.keys())):
@@ -113,6 +120,9 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
 
                     # Calculate total cost
                     totalCost += getCost(empAssignId, newDuration, baseSalary)
+                    # Calculate total machine cost
+                    if machineAssignId != "null":
+                        machineCost += getMachineCost(machineAssignId, newDuration, baseMachineCost)
                     # Calculate endTimeAll
                     if (endTimeAll < endTime[orderId][processId][taskId]):
                         endTimeAll = endTime[orderId][processId][taskId]
@@ -130,7 +140,25 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
                         'startTime': startTime[orderId][processId][taskId],
                         'endTime': endTime[orderId][processId][taskId],
                     })
-        scheduleWorkforce['totalCost'] = totalCost
+
+        #Calculate penalty fee for orders
+        penaltyFeeTotal = 0
+        for order in ORDERS:
+            orderId = order['id']
+            if (actualEndTime[orderId] > endTimeOrders[orderId]):
+                penaltyFeeTotal += getPenaltyFee(
+                    orderId,
+                    getActualWorkingTime(getTimeStamp(order["startTime"]),actualEndTime[orderId]),
+                    penaltyFeeOrders
+                )
+
+        # Calculate salary for employees
+        salaryTotal = 0
+        workingTime = getActualWorkingTime(scheduleWorkforce['schedule'][0]['startTime'], endTimeAll)
+        for employeeId in listEmployeeIds:
+            salaryTotal += getCost(employeeId, workingTime, baseSalary)
+
+        scheduleWorkforce['totalCost'] = salaryTotal + machineCost + penaltyFeeTotal
         scheduleWorkforce['startDateTime'] = (scheduleWorkforce['schedule'][0]['startTime'])
         scheduleWorkforce['endDateTime'] = endTimeAll
         scheduleWorkforce['numOrderNotOnTime'] = len(orderViolatedDeadline)

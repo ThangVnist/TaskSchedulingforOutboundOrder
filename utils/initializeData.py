@@ -31,6 +31,12 @@ avgSkill = dict()
 # Base salary of each employee (per hour)
 baseSalary = dict()
 
+# Base cost of each machine (per hour)
+baseMachineCost = dict()
+
+# Penalty fee of each Order
+penaltyFeeOrders = dict()
+
 # Employee assign for tasks
 e = dict()
 
@@ -49,6 +55,7 @@ for order in ORDERS :
     orderId = order['id']
     startTime[orderId] = dict()
     endTime[orderId] = dict()
+    penaltyFeeOrders[orderId] = order['penaltyFee'] if order.get('penaltyFee') else 0
     for item in order["goods"]:
         processId = item['goodId']
         endTime[orderId][processId] = dict()
@@ -77,7 +84,12 @@ for employee in EMPLOYEES:
     employeeId = employee['id']
     baseSalary[employeeId] = employee['cost']
 
-# Init endTime and startTime of orders:
+# Init base Cost of Machine:
+for machine in MACHINES:
+    machineId = machine['id']
+    baseMachineCost[machineId] = machine['cost']
+
+# Init data of orders:
 for order in ORDERS:
     endTimeOrders[order['id']] = getTimeStamp(order['deadline'])
     startTimeOrders[order['id']] = getTimeStamp(order['startTime'])
