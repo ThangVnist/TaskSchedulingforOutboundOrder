@@ -53,7 +53,8 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
         # Get value of fitness functions
         schedule = self.calcSchedule()
         f1 = schedule['totalCost']
-        f2 = schedule['endDateTime'] - schedule['schedule'][0]['startTime']
+        #f2 = schedule['endDateTime'] - schedule['schedule'][0]['startTime']
+        f2 = schedule['workingTime']
         f3 = schedule['numOrderNotOnTime']
 
         out["F"] = f1, f2, f3
@@ -64,10 +65,14 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
         scheduleWorkforce = dict()
         scheduleWorkforce['schedule'] = list()
         orderViolatedDeadline = list()
-        actualEndTime = {}
+        actualEndTime = dict()
         totalCost = 0
         endTimeAll = 0
         machineCost = 0
+
+        workingTimeTotal = dict()
+        for employeeId in listEmployeeIds:
+            workingTimeTotal[employeeId] = 0
 
         for task in TASKS:
             taskId = task['id']
@@ -83,6 +88,7 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
                         machineAssignId = "null"
                     # Calculate duration by employee Skill
                     newDuration = calculateDuration(task, avgSkill, empAssignId)
+                    workingTimeTotal[empAssignId] += newDuration
 
                     # Calculate Start time
                     # If task has preceedingTask
@@ -152,15 +158,24 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
                     penaltyFeeOrders
                 )
 
-        # Calculate salary for employees
         salaryTotal = 0
         workingTime = getActualWorkingTime(scheduleWorkforce['schedule'][0]['startTime'], endTimeAll)
+        scheduleWorkforce['employees'] = dict()
+        scheduleWorkforce['employees']['value'] = dict()
+        scheduleWorkforce['employees']['workingTime'] = workingTime
+
+        # Calculate salary for employees
         for employeeId in listEmployeeIds:
             salaryTotal += getCost(employeeId, workingTime, baseSalary)
+
+            scheduleWorkforce['employees']['value'][employeeId] = dict()
+            scheduleWorkforce['employees']['value'][employeeId]['workingTime'] = workingTimeTotal[empAssignId]
+            scheduleWorkforce['employees']['value'][employeeId]['ratio'] = 100 * workingTimeTotal[empAssignId] / workingTime
 
         scheduleWorkforce['totalCost'] = salaryTotal + machineCost + penaltyFeeTotal
         scheduleWorkforce['startDateTime'] = (scheduleWorkforce['schedule'][0]['startTime'])
         scheduleWorkforce['endDateTime'] = endTimeAll
+        scheduleWorkforce['workingTime'] = workingTime
         scheduleWorkforce['numOrderNotOnTime'] = len(orderViolatedDeadline)
         return scheduleWorkforce
 

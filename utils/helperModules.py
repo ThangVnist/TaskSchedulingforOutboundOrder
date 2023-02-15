@@ -35,7 +35,10 @@ def getStartTimeShift(startTime, duration):
     startHour, endHour = startDateTime.hour, endDateTime.hour
     startMinute, endMinute = startDateTime.minute, endDateTime.minute
 
-    if(startHour < 8 or startHour > 17 or (startHour == 17 and startMinute > 30) or endHour > 17 or (endHour == 17 and endMinute > 30)):
+    if(startHour <8):
+        startDateTime = datetime(startDateTime.year, startDateTime.month, startDateTime.day, 8, 0, 0)
+
+    if(startHour > 17 or (startHour == 17 and startMinute > 30) or endHour > 17 or (endHour == 17 and endMinute > 30)):
         startDateTime = datetime(nextDay.year, nextDay.month, nextDay.day, 8, 0, 0)
     
     if(startTime < today12h and ((startTime + duration > today12h))):    

@@ -19,7 +19,8 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           },
           {
             "id": "Order2",
@@ -34,7 +35,8 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           },
           {
             "id": "Order3",
@@ -55,7 +57,8 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           },
           {
             "id": "Order4",
@@ -70,7 +73,8 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           },
           {
             "id": "Order5",
@@ -85,7 +89,8 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           },
           {
             "id": "Order6",
@@ -106,7 +111,8 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           },
           {
             "id": "Order7",
@@ -121,7 +127,68 @@
             ],
             "priority": 1,
             "startTime": "11-08-2022 08:10",
-            "deadline": "13-08-2022 11:59"
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
+          },
+          {
+            "id": "Order8",
+            "code": "BIRE20220811.552758",
+            "goods": [
+              {
+                "goodId": "Good11",
+                "quantity": 100,
+                "weight": 1,
+                "name": "Sản phẩm 11"
+              },
+              {
+                "goodId": "Good12",
+                "quantity": 100,
+                "weight": 1,
+                "name": "Sản phẩm 12"
+              }
+            ],
+            "priority": 1,
+            "startTime": "11-08-2022 08:10",
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
+          },
+          {
+            "id": "Order9",
+            "code": "BIRE20220811.552759",
+            "goods": [
+              {
+                "goodId": "Good13",
+                "quantity": 100,
+                "weight": 1,
+                "name": "Sản phẩm 13"
+              }
+            ],
+            "priority": 1,
+            "startTime": "11-08-2022 08:10",
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
+          },
+          {
+            "id": "Order10",
+            "code": "BIRE20220811.5527510",
+            "goods": [
+              {
+                "goodId": "Good14",
+                "quantity": 100,
+                "weight": 1,
+                "name": "Sản phẩm 14"
+              },
+              {
+                "goodId": "Good15",
+                "quantity": 100,
+                "weight": 1,
+                "name": "Sản phẩm 15"
+              }
+            ],
+            "priority": 1,
+            "startTime": "11-08-2022 08:10",
+            "deadline": "16-08-2022 11:59",
+            "penaltyFee": 20000
           }
     ],
     "fromStockHumanResources": [
@@ -262,47 +329,47 @@
     "fromStockMachineResources": [
       {
         "id": "62b1a3ac29da55a4b049af47",
-        "cost": 0,
+        "cost": 15000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049af49",
-        "cost": 0,
+        "cost": 20000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049af45",
-        "cost": 0,
+        "cost": 21000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049af26",
-        "cost": 0,
+        "cost": 22000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049af28",
-        "cost": 0,
+        "cost": 19000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049aeef",
-        "cost": 0,
+        "cost": 20000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049aef1",
-        "cost": 0,
+        "cost": 17000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049aef3",
-        "cost": 0,
+        "cost": 25000,
         "minExperience": 0.2
       },
       {
         "id": "62b1a3ac29da55a4b049aef5",
-        "cost": 0,
+        "cost": 22000,
         "minExperience": 0.2
       },
       {
