@@ -18,6 +18,9 @@ def getAbsoluteDirectory(pathFile):
 def formatDateTimeSchedules(schedules):
     # Format date time
     for schedule in schedules:
+        #sort task by startTime
+        schedule['schedule'].sort(key=lambda x:x['startTime'])
+
         for task in schedule['schedule']:
             task['startTime'] = getDateTimeFromTimestamp(task['startTime']).strftime("%d/%m/%Y, %H:%M")
             task['endTime'] = getDateTimeFromTimestamp(task['endTime']).strftime("%d/%m/%Y, %H:%M")

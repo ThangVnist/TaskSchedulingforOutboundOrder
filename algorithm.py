@@ -1,5 +1,5 @@
 import numpy as np
-from pymoo.algorithms.moo.rnsga2 import RNSGA2
+from pymoo.algorithms.moo.nsga2 import NSGA2
 from pymoo.core.mixed import MixedVariableGA
 from pymoo.operators.mutation.pm import PolynomialMutation
 from pymoo.core.mixed import MixedVariableMating, MixedVariableGA, MixedVariableSampling, MixedVariableDuplicateElimination
@@ -20,8 +20,7 @@ ref_points = np.array([[100000, 100, 0], [1000000, 200, 100]])
 
 # Get algorithm
 # algorithm = MixedVariableGA(pop_size=20, survival=RankAndCrowdingSurvival())
-algorithm = RNSGA2(
-    ref_points = ref_points,
+algorithm = NSGA2(
     pop_size=POP_SIZE,
     sampling=MixedVariableSampling(),
     mating=MixedVariableMating(eliminate_duplicates=MixedVariableDuplicateElimination()),
@@ -45,7 +44,7 @@ schedules = list()
 # Out param is required
 out = dict()
 
-for solution in res.X :
+for solution in res.X:
     problem._evaluate(solution, out)
     schedules.append(problem.calcSchedule())
 
