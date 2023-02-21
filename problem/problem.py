@@ -164,8 +164,8 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
             salaryTotal += getCost(employeeId, workingTime, baseSalary)
 
             scheduleWorkforce['employees']['value'][employeeId] = dict()
-            scheduleWorkforce['employees']['value'][employeeId]['workingTime'] = workingTimeTotal[empAssignId]
-            scheduleWorkforce['employees']['value'][employeeId]['ratio'] = 100 * workingTimeTotal[empAssignId] / workingTime
+            scheduleWorkforce['employees']['value'][employeeId]['workingTime'] = workingTimeTotal[employeeId]
+            scheduleWorkforce['employees']['value'][employeeId]['ratio'] = 100 * workingTimeTotal[employeeId] / workingTime
 
         scheduleWorkforce['totalCost'] = salaryTotal + machineCost + penaltyFeeTotal
         scheduleWorkforce['startDateTime'] = (scheduleWorkforce['schedule'][0]['startTime'])
