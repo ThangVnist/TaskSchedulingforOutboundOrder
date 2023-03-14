@@ -35,12 +35,31 @@ def getStartTimeShift(startTime, duration):
     startHour, endHour = startDateTime.hour, endDateTime.hour
     startMinute, endMinute = startDateTime.minute, endDateTime.minute
 
-    if(startHour > 17 or (startHour == 17 and startMinute > 30) or endHour > 17 or (endHour == 17 and endMinute > 30)):    
+    if(startHour <8):
+        startDateTime = datetime(startDateTime.year, startDateTime.month, startDateTime.day, 8, 0, 0)
+
+    if(startHour > 17 or (startHour == 17 and startMinute > 30) or endHour > 17 or (endHour == 17 and endMinute > 30)):
         startDateTime = datetime(nextDay.year, nextDay.month, nextDay.day, 8, 0, 0)
     
     if(startTime < today12h and ((startTime + duration > today12h))):    
         return today13h
     return startDateTime.timestamp()
+
+def getActualWorkingTime(startTime, endTime):
+    startDateTime = datetime.fromtimestamp(startTime)
+    endDateTime = datetime.fromtimestamp(endTime)
+    startTime8h = datetime(startDateTime.year, startDateTime.month, startDateTime.day, 8, 0 ,0).timestamp()
+    startTime12h = datetime(startDateTime.year, startDateTime.month, startDateTime.day, 12, 0 ,0).timestamp()
+    endTime17_5h = datetime(endDateTime.year, endDateTime.month, endDateTime.day, 17, 30 ,0).timestamp()
+
+    actualTime = (endDateTime.day - startDateTime.day + 1) * 8.5 * 3600 - (startTime - startTime8h) - (endTime17_5h - endTime)
+
+    if startDateTime.hour >= 13:
+        actualTime += 3600
+    if endDateTime.hour <= 12:
+        actualTime += 3600
+
+    return actualTime
 
 def getDateTimeFromTimestamp(timestamp):
     res = datetime.fromtimestamp(timestamp)
@@ -49,6 +68,14 @@ def getDateTimeFromTimestamp(timestamp):
 # Calculate cost of each employee with duration
 def getCost(employeeId, duration, baseSalary):
     return baseSalary[employeeId] * duration / 3600
+
+# Calculate cost of each machine with duration
+def getMachineCost(machineId, duration, baseMachineCost):
+    return baseMachineCost[machineId] * duration / 3600
+
+# Calculate cost of each machine with duration
+def getPenaltyFee(orderId, duration, penaltyFeeOrders):
+    return penaltyFeeOrders[orderId] * duration / 3600
 
 # Calculate score for solutions and get best solution.
 def getBestSolution(objectives, solutions) :
