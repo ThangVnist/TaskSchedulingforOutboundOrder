@@ -46,6 +46,9 @@ e = dict()
 # Machine assign for tasks
 m = dict()
 
+#List job in Tasks
+jobTask = dict()
+
 #------- Load raw data from json data ---------#
 ORDERS = load.data["bills"]  # List of orders
 TASKS = load.data["fromStockJobTasks"]    # List of tasks
@@ -65,21 +68,29 @@ def initDataTasks():
             startTime[orderId][processId] = dict()
             for task in TASKS:
                 taskId = task['id']
-                startTime[orderId][processId][taskId] = getTimeStamp(order["startTime"])
-                endTime[orderId][processId][taskId] = getTimeStamp(order["startTime"])
+                endTime[orderId][processId][taskId] = dict()
+                startTime[orderId][processId][taskId] = dict()
+                for job in task['jobs']:
+                    jobId = job['id']
+                    startTime[orderId][processId][taskId][jobId] = getTimeStamp(order["startTime"])
+                    endTime[orderId][processId][taskId][jobId] = getTimeStamp(order["startTime"])
 
 # Init avgSkill of each Task each employee
 for employee in EMPLOYEES:
     avgSkill[employee['id']] = dict()
     for task in TASKS:
-        avg = 0
-        sumSkillValue = 0
-        sumSkill = 0
-        for skill in task["skills"]:
-            sumSkillValue += employee["skillLevel"][skill]
-            sumSkill += 1
-        if(sumSkill != 0):   avg = sumSkillValue / sumSkill
-        avgSkill[employee['id']][task['id']] = avg
+        avgSkill[employee['id']][task['id']] = dict()
+        jobTask[task['id']] = list()
+        for job in task['jobs']:
+            avg = 0
+            sumSkillValue = 0
+            sumSkill = 0
+            jobTask[task['id']].append(job['id'])
+            for skill in job["skills"]:
+                sumSkillValue += employee["skillLevel"][skill]
+                sumSkill += 1
+            if(sumSkill != 0):   avg = sumSkillValue / sumSkill
+            avgSkill[employee['id']][task['id']][job['id']] = avg
     
 
 # Init base Salary of employees:
@@ -101,7 +112,10 @@ for order in ORDERS:
     requestJobs[orderId] = dict()
 
     for item in order["goods"]:
-        requestJobs[orderId][item["goodId"]] = item["requestJobs"] if item.get("requestJobs") else None
+        requestJobs[orderId][item["goodId"]] = dict()
+        for task in item["requestTasks"]:
+            requestJobs[orderId][item["goodId"]][task['id']] = list()
+            requestJobs[orderId][item["goodId"]][task['id']] = task['requestJobs'] if task.get("requestJobs") else jobTask[task['id']]
 
 
 # Init list employee Id

@@ -9,13 +9,32 @@
                 "quantity": 100,
                 "weight": 1,
                 "name": "Jucca Nước",
-                "requestJobs": ["j1", "j2"]
+                "requestTasks": [
+                  {
+                    "id": "task1",
+                    "requestJobs": ["j1", "j2"]
+                  },
+                  {
+                    "id": "task2",
+                    "requestJobs": ["j1", "j2"]
+                  }
+                ]
               },
               {
                 "goodId": "Good2",
                 "quantity": 100,
                 "weight": 1,
-                "name": "Propylen Glycon"
+                "name": "Propylen Glycon",
+                "requestTasks": [
+                  {
+                    "id": "task1",
+                    "requestJobs": ["j1", "j2"]
+                  },
+                  {
+                    "id": "task2",
+                    "requestJobs": ["j1", "j2"]
+                  }
+                ]
               }
             ],
             "priority": 1,
@@ -31,7 +50,17 @@
                 "goodId": "Good3",
                 "quantity": 100,
                 "weight": 1,
-                "name": "Bình ắc quy"
+                "name": "Bình ắc quy",
+                "requestTasks": [
+                  {
+                    "id": "task1",
+                    "requestJobs": []
+                  },
+                  {
+                    "id": "task2",
+                    "requestJobs": []
+                  }
+                ]
               }
             ],
             "priority": 1,
@@ -47,143 +76,33 @@
                 "goodId": "Good4",
                 "quantity": 100,
                 "weight": 1,
-                "name": "Máy nén"
+                "name": "Máy nén",
+                "requestTasks": [
+                  {
+                    "id": "task1",
+                    "requestJobs": []
+                  },
+                  {
+                    "id": "task2",
+                    "requestJobs": []
+                  }
+                ]
               },
               {
                 "goodId": "Good5",
                 "quantity": 100,
                 "weight": 1,
-                "name": "ĐƯỜNG ACESULFAME K"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order4",
-            "code": "BIRE20220811.552754",
-            "goods": [
-              {
-                "goodId": "Good6",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 6"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order5",
-            "code": "BIRE20220811.552755",
-            "goods": [
-              {
-                "goodId": "Good7",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 7"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order6",
-            "code": "BIRE20220811.552756",
-            "goods": [
-              {
-                "goodId": "Good8",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 8"
-              },
-              {
-                "goodId": "Good9",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 9"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order7",
-            "code": "BIRE20220811.552757",
-            "goods": [
-              {
-                "goodId": "Good10",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 10"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order8",
-            "code": "BIRE20220811.552758",
-            "goods": [
-              {
-                "goodId": "Good11",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 11"
-              },
-              {
-                "goodId": "Good12",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 12"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order9",
-            "code": "BIRE20220811.552759",
-            "goods": [
-              {
-                "goodId": "Good13",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 13"
-              }
-            ],
-            "priority": 1,
-            "startTime": "11-08-2022 08:10",
-            "deadline": "16-08-2022 11:59",
-            "penaltyFee": 20000
-          },
-          {
-            "id": "Order10",
-            "code": "BIRE20220811.5527510",
-            "goods": [
-              {
-                "goodId": "Good14",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 14"
-              },
-              {
-                "goodId": "Good15",
-                "quantity": 100,
-                "weight": 1,
-                "name": "Sản phẩm 15"
+                "name": "ĐƯỜNG ACESULFAME K",
+                "requestTasks": [
+                  {
+                    "id": "task1",
+                    "requestJobs": []
+                  },
+                  {
+                    "id": "task2",
+                    "requestJobs": []
+                  }
+                ]
               }
             ],
             "priority": 1,
@@ -411,343 +330,694 @@
     ],
     "fromStockJobTasks": [
       {
-        "id": "j1",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [
-        ],
-        "skills": [
-          "62b1a3ac29da55a4b049ae80",
-          "62b1a3ac29da55a4b049ae81",
-          "62b1a3ac29da55a4b049ae83"
-        ],
-        "group": "1",
-        "estimatedDuration": 0.1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 100,
-        "estimateMaxCost": 200,
-        "estimateAssetCost": 100,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [],
-        "name": "In tài liệu đơn hàng",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
+        "id": "task1",
+        "description": "Task 1",
+        "jobs": [
+          {
+            "id": "j1",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae83"
+            ],
+            "group": "1",
+            "estimatedDuration": 0.1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 100,
+            "estimateMaxCost": 200,
+            "estimateAssetCost": 100,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [],
+            "name": "In tài liệu đơn hàng",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j2",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049ae8d",
+              "62b1a3ac29da55a4b049ae8f",
+              "62b1a3ac29da55a4b049ae91",
+              "62b1a3ac29da55a4b049ae93",
+              "62b1a3ac29da55a4b049ae95"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j1"
+            ],
+            "name": "Tạo phiếu yêu cầu kiểm định",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j3",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae83",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j2"
+            ],
+            "name": "Kiểm tra tem/mã/lô hàng",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j4",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae87",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j3"
+            ],
+            "name": "Unpack và kiểm tra số lượng/chất lượng hàng hóa trong lô",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j5",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae82",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j4"
+            ],
+            "name": "Phân loại hàng hóa theo danh mục, tình trạng, chất lượng",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j6",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae83",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j5"
+            ],
+            "name": "Đối chiếu packing",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j7",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j6"
+            ],
+            "name": "Ghi chú thay đổi về số lượng/chất lượng hàng hóa",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j8",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049ae8d",
+              "62b1a3ac29da55a4b049ae8f",
+              "62b1a3ac29da55a4b049ae91",
+              "62b1a3ac29da55a4b049ae93",
+              "62b1a3ac29da55a4b049ae95"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae85"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j7"
+            ],
+            "name": "Tạo báo cáo/biên bản kiểm định",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j9",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae84"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j8"
+            ],
+            "name": "Đánh lô hàng hóa",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j10",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049af45",
+              "62b1a3ac29da55a4b049af47",
+              "62b1a3ac29da55a4b049af49",
+              "62b1a3ac29da55a4b049af26",
+              "62b1a3ac29da55a4b049af28"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae86",
+              "62b1a3ac29da55a4b049ae88"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j9"
+            ],
+            "name": "Đưa hàng vào kho",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j11",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae82"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j9"
+            ],
+            "name": "Giám sát đưa hàng vào kho",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j12",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049ae8f",
+              "62b1a3ac29da55a4b049ae93",
+              "62b1a3ac29da55a4b049af45"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae83",
+              "62b1a3ac29da55a4b049ae85"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j10",
+              "j11"
+            ],
+            "name": "Xuất phiếu nhập kho",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          }
+        ]
       },
       {
-        "id": "j2",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [
-          "62b1a3ac29da55a4b049ae8d",
-          "62b1a3ac29da55a4b049ae8f",
-          "62b1a3ac29da55a4b049ae91",
-          "62b1a3ac29da55a4b049ae93",
-          "62b1a3ac29da55a4b049ae95"
-        ],
-        "skills": [
-          "62b1a3ac29da55a4b049ae81"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j1"
-        ],
-        "name": "Tạo phiếu yêu cầu kiểm định",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j3",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae83",
-          "62b1a3ac29da55a4b049ae89"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j2"
-        ],
-        "name": "Kiểm tra tem/mã/lô hàng",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j4",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae80",
-          "62b1a3ac29da55a4b049ae87",
-          "62b1a3ac29da55a4b049ae89"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j3"
-        ],
-        "name": "Unpack và kiểm tra số lượng/chất lượng hàng hóa trong lô",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j5",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae80",
-          "62b1a3ac29da55a4b049ae82",
-          "62b1a3ac29da55a4b049ae89"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j4"
-        ],
-        "name": "Phân loại hàng hóa theo danh mục, tình trạng, chất lượng",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j6",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae83",
-          "62b1a3ac29da55a4b049ae89"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j5"
-        ],
-        "name": "Đối chiếu packing",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j7",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae80",
-          "62b1a3ac29da55a4b049ae81",
-          "62b1a3ac29da55a4b049ae89"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j6"
-        ],
-        "name": "Ghi chú thay đổi về số lượng/chất lượng hàng hóa",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j8",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [
-          "62b1a3ac29da55a4b049ae8d",
-          "62b1a3ac29da55a4b049ae8f",
-          "62b1a3ac29da55a4b049ae91",
-          "62b1a3ac29da55a4b049ae93",
-          "62b1a3ac29da55a4b049ae95"
-        ],
-        "skills": [
-          "62b1a3ac29da55a4b049ae81",
-          "62b1a3ac29da55a4b049ae85"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j7"
-        ],
-        "name": "Tạo báo cáo/biên bản kiểm định",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j9",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae80",
-          "62b1a3ac29da55a4b049ae84"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j8"
-        ],
-        "name": "Đánh lô hàng hóa",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j10",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [
-          "62b1a3ac29da55a4b049af45",
-          "62b1a3ac29da55a4b049af47",
-          "62b1a3ac29da55a4b049af49",
-          "62b1a3ac29da55a4b049af26",
-          "62b1a3ac29da55a4b049af28"
-        ],
-        "skills": [
-          "62b1a3ac29da55a4b049ae80",
-          "62b1a3ac29da55a4b049ae86",
-          "62b1a3ac29da55a4b049ae88"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j9"
-        ],
-        "name": "Đưa hàng vào kho",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j11",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [],
-        "skills": [
-          "62b1a3ac29da55a4b049ae81",
-          "62b1a3ac29da55a4b049ae82"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j9"
-        ],
-        "name": "Giám sát đưa hàng vào kho",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
-      },
-      {
-        "id": "j12",
-        "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
-        "requiredAssets": [
-          "62b1a3ac29da55a4b049ae8f",
-          "62b1a3ac29da55a4b049ae93",
-          "62b1a3ac29da55a4b049af45"
-        ],
-        "skills": [
-          "62b1a3ac29da55a4b049ae81",
-          "62b1a3ac29da55a4b049ae83",
-          "62b1a3ac29da55a4b049ae85"
-        ],
-        "group": "1",
-        "estimatedDuration": 1,
-        "estimateOptimisticTime": 1,
-        "estimateNormalCost": 1,
-        "estimateMaxCost": 1,
-        "estimateAssetCost": 1,
-        "followingTasks": [],
-        "priority": 1,
-        "preceedingTasks": [
-          "j10",
-          "j11"
-        ],
-        "name": "Xuất phiếu nhập kho",
-        "taskWeight": {
-          "timeWeight": 0.3333333333333333,
-          "qualityWeight": 0.3333333333333333,
-          "costWeight": 0.3333333333333333
-        }
+        "id": "task2",
+        "description": "Task 2",
+        "jobs": [
+          {
+            "id": "j1",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae83"
+            ],
+            "group": "1",
+            "estimatedDuration": 0.1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 100,
+            "estimateMaxCost": 200,
+            "estimateAssetCost": 100,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [],
+            "name": "In tài liệu đơn hàng",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j2",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049ae8d",
+              "62b1a3ac29da55a4b049ae8f",
+              "62b1a3ac29da55a4b049ae91",
+              "62b1a3ac29da55a4b049ae93",
+              "62b1a3ac29da55a4b049ae95"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j1"
+            ],
+            "name": "Tạo phiếu yêu cầu kiểm định",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j3",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae83",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j2"
+            ],
+            "name": "Kiểm tra tem/mã/lô hàng",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j4",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae87",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j3"
+            ],
+            "name": "Unpack và kiểm tra số lượng/chất lượng hàng hóa trong lô",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j5",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae82",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j4"
+            ],
+            "name": "Phân loại hàng hóa theo danh mục, tình trạng, chất lượng",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j6",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae83",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j5"
+            ],
+            "name": "Đối chiếu packing",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j7",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae89"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j6"
+            ],
+            "name": "Ghi chú thay đổi về số lượng/chất lượng hàng hóa",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j8",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049ae8d",
+              "62b1a3ac29da55a4b049ae8f",
+              "62b1a3ac29da55a4b049ae91",
+              "62b1a3ac29da55a4b049ae93",
+              "62b1a3ac29da55a4b049ae95"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae85"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j7"
+            ],
+            "name": "Tạo báo cáo/biên bản kiểm định",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j9",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae84"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j8"
+            ],
+            "name": "Đánh lô hàng hóa",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j10",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049af45",
+              "62b1a3ac29da55a4b049af47",
+              "62b1a3ac29da55a4b049af49",
+              "62b1a3ac29da55a4b049af26",
+              "62b1a3ac29da55a4b049af28"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae80",
+              "62b1a3ac29da55a4b049ae86",
+              "62b1a3ac29da55a4b049ae88"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j9"
+            ],
+            "name": "Đưa hàng vào kho",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j11",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae82"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j9"
+            ],
+            "name": "Giám sát đưa hàng vào kho",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          },
+          {
+            "id": "j12",
+            "code": "DXT_b06305c0-f150-11ec-9cb9-e72d112caadc",
+            "requiredAssets": [
+              "62b1a3ac29da55a4b049ae8f",
+              "62b1a3ac29da55a4b049ae93",
+              "62b1a3ac29da55a4b049af45"
+            ],
+            "skills": [
+              "62b1a3ac29da55a4b049ae81",
+              "62b1a3ac29da55a4b049ae83",
+              "62b1a3ac29da55a4b049ae85"
+            ],
+            "group": "1",
+            "estimatedDuration": 1,
+            "estimateOptimisticTime": 1,
+            "estimateNormalCost": 1,
+            "estimateMaxCost": 1,
+            "estimateAssetCost": 1,
+            "followingTasks": [],
+            "priority": 1,
+            "preceedingTasks": [
+              "j10",
+              "j11"
+            ],
+            "name": "Xuất phiếu nhập kho",
+            "taskWeight": {
+              "timeWeight": 0.3333333333333333,
+              "qualityWeight": 0.3333333333333333,
+              "costWeight": 0.3333333333333333
+            }
+          }
+        ]
       }
     ],
     "a":1

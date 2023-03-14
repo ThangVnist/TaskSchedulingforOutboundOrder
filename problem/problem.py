@@ -17,9 +17,10 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
         for order in ORDERS:
             for item in order["goods"]:
                 for task in TASKS:
-                    vars[f"e {order['id']} {item['goodId']} {task['id']}"] = Choice(options=listEmployeeIds)
-                    if task["requiredAssets"]:
-                        vars[f"m {order['id']} {item['goodId']} {task['id']}"] = Choice(options=task["requiredAssets"])
+                    for job in task['jobs']:
+                        vars[f"e {order['id']} {item['goodId']} {task['id']} {job['id']}"] = Choice(options=listEmployeeIds)
+                        if job["requiredAssets"]:
+                            vars[f"m {order['id']} {item['goodId']} {task['id']} {job['id']}"] = Choice(options=job["requiredAssets"])
 
         super().__init__(vars=vars, n_obj=3, **kwargs)
 
@@ -35,9 +36,13 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
                 m[orderId][processId] = dict()
                 for task in TASKS:
                     taskId = task['id']
-                    e[orderId][processId][taskId] = X[f"e {orderId} {processId} {taskId}"]
-                    if task["requiredAssets"]:
-                        m[orderId][processId][taskId] = X[f"m {orderId} {processId} {taskId}"]
+                    e[orderId][processId][taskId] = dict()
+                    m[orderId][processId][taskId] = dict()
+                    for job in task['jobs']:
+                        jobId = job['id']
+                        e[orderId][processId][taskId][jobId] = X[f"e {orderId} {processId} {taskId} {jobId}"]
+                        if job["requiredAssets"]:
+                            m[orderId][processId][taskId][jobId] = X[f"m {orderId} {processId} {taskId} {jobId}"]
 
         # Get value of fitness functions
         schedule = self.calcSchedule()
@@ -69,78 +74,79 @@ class MultiObjectiveMixedVariableProblem(ElementwiseProblem):
 
         for task in TASKS:
             taskId = task['id']
-            for order in ORDERS:
-                orderId = order['id']
-                actualEndTime[order['id']] = 0
-                for item in order["goods"]:
-                    processId = item['goodId']
-                    if requestJobs[orderId][processId] and taskId not in requestJobs[orderId][processId]:
-                        continue
-                    empAssignId = e[orderId][processId][taskId]
-                    if taskId in m[orderId][processId]:
-                        machineAssignId = m[orderId][processId][taskId]
-                    else:
-                        machineAssignId = "null"
-                    # Calculate duration by employee Skill
-                    newDuration = calculateDuration(task, avgSkill, empAssignId)
-                    workingTimeTotal[empAssignId] += newDuration
+            for job in task['jobs']:
+                jobId = job['id']
+                for order in ORDERS:
+                    orderId = order['id']
+                    actualEndTime[order['id']] = 0
+                    for item in order["goods"]:
+                        processId = item['goodId']
+                        if (requestJobs[orderId][processId].get(taskId) is None) or (jobId not in requestJobs[orderId][processId][taskId]):
+                            continue
+                        empAssignId = e[orderId][processId][taskId][jobId]
+                        machineAssignId = m[orderId][processId][taskId][jobId] if taskId in m[orderId][processId][taskId] else "null"
 
-                    # Calculate Start time
-                    # If task has preceedingTask
-                    if (task["preceedingTasks"]):
-                        for preceeding in task["preceedingTasks"]:
-                            endTimePreceeding = endTime[orderId][processId][preceeding]
+                        # Calculate duration by employee Skill
+                        newDuration = calculateDuration(taskId, job, avgSkill, empAssignId)
+                        workingTimeTotal[empAssignId] += newDuration
 
-                            if (endTimePreceeding > startTime[orderId][processId][taskId]):
-                                startTime[orderId][processId][taskId] = endTimePreceeding
+                        # Calculate Start time
+                        # If task has preceedingTask
+                        if (job["preceedingTasks"]):
+                            for preceeding in job["preceedingTasks"]:
+                                endTimePreceeding = endTime[orderId][processId][taskId][preceeding]
 
-                    for next_item in q[empAssignId]:
-                        start = getStartTimeShift(startTime[orderId][processId][taskId], newDuration)
-                        end = start + newDuration
-                        if ((start >= next_item[0] and start < next_item[1]) or (start < next_item[0] and end > next_item[0])):
-                            startTime[orderId][processId][taskId] = next_item[1]
-                        startTime[orderId][processId][taskId] = next_item[1]
+                                if (endTimePreceeding > endTime[orderId][processId][taskId][jobId]):
+                                    startTime[orderId][processId][taskId][jobId] = endTimePreceeding
 
-                    if(machineAssignId != 'null'):
-                        for next_item in q[machineAssignId]:
-                            start = getStartTimeShift(startTime[orderId][processId][taskId], newDuration)
+                        for next_item in q[empAssignId]:
+                            start = getStartTimeShift(startTime[orderId][processId][taskId][jobId], newDuration)
                             end = start + newDuration
                             if ((start >= next_item[0] and start < next_item[1]) or (start < next_item[0] and end > next_item[0])):
-                                startTime[orderId][processId][taskId] = next_item[1]
+                                startTime[orderId][processId][taskId][jobId] = next_item[1]
+                            startTime[orderId][processId][taskId][jobId] = next_item[1]
 
-                    # Calculate start time by shift time
-                    startTime[orderId][processId][taskId] = getStartTimeShift(startTime[orderId][processId][taskId],
-                                                                              newDuration)
+                        if(machineAssignId != 'null'):
+                            for next_item in q[machineAssignId]:
+                                start = getStartTimeShift(startTime[orderId][processId][taskId][jobId], newDuration)
+                                end = start + newDuration
+                                if ((start >= next_item[0] and start < next_item[1]) or (start < next_item[0] and end > next_item[0])):
+                                    startTime[orderId][processId][taskId][jobId] = next_item[1]
 
-                    # Calculate endtime
-                    endTime[orderId][processId][taskId] = startTime[orderId][processId][taskId] + newDuration
+                        # Calculate start time by shift time
+                        startTime[orderId][processId][taskId][jobId] = getStartTimeShift(startTime[orderId][processId][taskId][jobId],
+                                                                                  newDuration)
 
-                    actualEndTime[order['id']] = max(actualEndTime[order['id']], endTime[orderId][processId][taskId])
+                        # Calculate endtime
+                        endTime[orderId][processId][taskId][jobId] = startTime[orderId][processId][taskId][jobId] + newDuration
 
-                    q[empAssignId].add([startTime[orderId][processId][taskId], endTime[orderId][processId][taskId]])
-                    # Calculate total cost
-                    totalCost += getCost(empAssignId, newDuration, baseSalary)
-                    # Calculate total machine cost
-                    if machineAssignId != "null":
-                        machineCost += getMachineCost(machineAssignId, newDuration, baseMachineCost)
-                        q[machineAssignId].add([startTime[orderId][processId][taskId], endTime[orderId][processId][taskId]])
-                    # Calculate endTimeAll
-                    if (endTimeAll < endTime[orderId][processId][taskId]):
-                        endTimeAll = endTime[orderId][processId][taskId]
-                    # Calculate task not on time
-                    if (endTime[orderId][processId][taskId] > endTimeOrders[orderId]):
-                        if (orderId not in orderViolatedDeadline):
-                            orderViolatedDeadline.append(orderId)
-                    # add Task to Workforce
-                    scheduleWorkforce['schedule'].append({
-                        "orderId": orderId,
-                        "processId": processId,
-                        "taskId": taskId,
-                        'employeeId': empAssignId,
-                        'machineId': machineAssignId,
-                        'startTime': startTime[orderId][processId][taskId],
-                        'endTime': endTime[orderId][processId][taskId],
-                    })
+                        actualEndTime[order['id']] = max(actualEndTime[order['id']], endTime[orderId][processId][taskId][jobId])
+
+                        q[empAssignId].add([startTime[orderId][processId][taskId][jobId], endTime[orderId][processId][taskId][jobId]])
+                        # Calculate total cost
+                        totalCost += getCost(empAssignId, newDuration, baseSalary)
+                        # Calculate total machine cost
+                        if machineAssignId != "null":
+                            machineCost += getMachineCost(machineAssignId, newDuration, baseMachineCost)
+                            q[machineAssignId].add([startTime[orderId][processId][taskId][jobId], endTime[orderId][processId][taskId][jobId]])
+                        # Calculate endTimeAll
+                        if (endTimeAll < endTime[orderId][processId][taskId][jobId]):
+                            endTimeAll = endTime[orderId][processId][taskId][jobId]
+                        # Calculate task not on time
+                        if (endTime[orderId][processId][taskId][jobId] > endTimeOrders[orderId]):
+                            if (orderId not in orderViolatedDeadline):
+                                orderViolatedDeadline.append(orderId)
+                        # add Task to Workforce
+                        scheduleWorkforce['schedule'].append({
+                            "orderId": orderId,
+                            "processId": processId,
+                            "taskId": taskId,
+                            "jobId": jobId,
+                            'employeeId': empAssignId,
+                            'machineId': machineAssignId,
+                            'startTime': startTime[orderId][processId][taskId][jobId],
+                            'endTime': endTime[orderId][processId][taskId][jobId],
+                        })
 
         #Calculate penalty fee for orders
         penaltyFeeTotal = 0

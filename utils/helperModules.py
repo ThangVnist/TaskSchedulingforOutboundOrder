@@ -13,16 +13,16 @@ def getTimeStamp(stringTime):
     return res.timestamp()
 
 # Calculate duration task time in practical from employee and skill level
-def calculateDuration(task, avgSkill, employeeId):
-    oldDuration = task["estimatedDuration"] * 3600
-    taskId = task["id"]
+def calculateDuration(taskId, job, avgSkill, employeeId):
+    oldDuration = job["estimatedDuration"] * 3600
+    jobId = job["id"]
     listEmpId = avgSkill.keys()
     totalSkillLevel = 0
     for empId in listEmpId :
-        totalSkillLevel += avgSkill[f"{empId}"][taskId]
+        totalSkillLevel += avgSkill[f"{empId}"][taskId][jobId]
     avgSkillLevel = totalSkillLevel / len(listEmpId)
 
-    newDuration = oldDuration * (1 - (avgSkill[employeeId][taskId] - avgSkillLevel) / avgSkillLevel)
+    newDuration = oldDuration * (1 - (avgSkill[employeeId][taskId][jobId] - avgSkillLevel) / avgSkillLevel)
     return newDuration
 
 # Calculate the start time in practical if it violated shift time
